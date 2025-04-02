@@ -58,6 +58,12 @@
 #navbar .theme-toggle input:checked ~ .icon-container .moon{
     transform: scale(1);
 }
+#navbar .theme-toggle .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
 /* NavBar Responsive code */
 
 @media only screen and (max-width: 700px){
@@ -65,10 +71,10 @@
         max-width: 100%;
         width: 90%;
     }
-    #navbar.nav-routes{
+    #navbar .nav-routes{
         display: none;
     }
-    #navbar.menu-btn{
+    #navbar .menu-btn{
         display: flex;
     }
 }
