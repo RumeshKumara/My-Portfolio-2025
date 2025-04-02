@@ -1,0 +1,74 @@
+/* NavBar Start */
+#navbar{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
+    max-width: fit-content;
+    z-index: 100;
+    background: rgba(var(--bg-secondary-rgb), 0.5);
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-2);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    border: var(--gray-border);
+}
+#navbar .nav-routes{
+    align-items: center;
+    gap: 30px;
+}
+#navbar .route{
+    font-size: 16px;
+    font-weight:700;
+    display: block;
+    cursor: pointer;
+    transition: var(--transition);
+}
+#navbar .route.active{
+    color: var(--color-primary);
+   
+}
+#navbar .menu-btn{
+    display: none;
+}
+#navbar .theme-toggle{
+    display: flex;
+    align-items: center;
+    
+}
+#navbar .theme-toggle input{
+    position: absolute;
+    top: -9999px;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+#navbar .theme-toggle .sun,
+#navbar .theme-toggle .moon{
+    transform: scale(0);
+    transition: var(--transition);
+    color: var(--text-color);
+
+}
+#navbar .theme-toggle input:not(:checked) ~ .icon-container .sun{
+    transform: scale(1);
+}
+#navbar .theme-toggle input:checked ~ .icon-container .moon{
+    transform: scale(1);
+}
+/* NavBar Responsive code */
+
+@media only screen and (max-width: 700px){
+    #navbar{
+        max-width: 100%;
+        width: 90%;
+    }
+    #navbar.nav-routes{
+        display: none;
+    }
+    #navbar.menu-btn{
+        display: flex;
+    }
+}

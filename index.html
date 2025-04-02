@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Custom Style -->
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,8 +19,11 @@
   <body>
     <!-- Navbar Start -->
     <nav id="navbar" class="flex-center">
+      <div class="logo">
+        <i data-custom-icon="logo"></i>
+      </div>
       <div class="flex nav-routes">
-        <a href="#heade" class="route">Home</a>
+        <a href="#header" class="route active">Home</a>
         <a href="#about" class="route">About</a>
         <a href="#services" class="route">Services</a>
         <a href="#projects" class="route">Projects</a>
@@ -30,8 +34,8 @@
         <label class="theme-toggle">
           <input type="checkbox" id="theme-checkbox" />
           <div class="icon-container">
-            <i data-lucide="sun"></i>
-            <i data-lucide="moon"></i>
+            <i data-lucide="sun" class="sun"></i>
+            <i data-lucide="moon" class="moon"></i>
           </div>
         </label>
         <div class="icon-cotainer menu-btn" id="menu-btn">
