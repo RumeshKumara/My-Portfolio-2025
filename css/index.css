@@ -210,6 +210,11 @@
         font-weight: 500;
     }
 
+    .logo svg{
+       width: 2.5rem;
+       height: 2.5rem; 
+    }
+
     /* Responsive */
     @media screen and (max-width: 900px) {
        .title{
