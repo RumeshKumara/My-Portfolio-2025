@@ -94,6 +94,9 @@
     overflow: hidden;
     
 }
+.sidebar.visible{
+    height: 100%;
+}
 
 .sidebar .sidebar-wrapper{
     padding: 1rem;

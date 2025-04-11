@@ -19,3 +19,14 @@ dataCustomIcon.forEach((icon) => {
         request.send();
     }
 });
+
+// SIDEBAR START
+const menuBtn = document.getElementById('menu-btn'); // Fix: Changed 'menu-Btn' to 'menu-btn'
+const sidebar = document.querySelector('.sidebar');
+const closeBtn = document.getElementById('close-sidebar-btn'); // Fix: Changed to getElementById
+menuBtn.onclick = () => {
+    sidebar.classList.toggle("visible");
+};
+closeBtn.onclick = () => {
+    sidebar.classList.remove("visible");
+};

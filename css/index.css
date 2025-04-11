@@ -82,7 +82,7 @@
     }
     p{
         font-size: 15px;
-        line-height: 156px;
+        line-height: 25px;
     }
     .bg-base{
         background-color: var(--bg-base);
