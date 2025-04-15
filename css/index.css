@@ -140,13 +140,58 @@
         justify-content: center;
         align-items: center;
         color: var(--color-muted);
+        background: var(--bg-base);
+        width: 3rem;
+        border-radius: var(--radius-2);
+        height: 3rem;
         opacity: 0.8;
-        font-size: 20px;
+        font-size: 24px;
+        transition: var(--transition);
+        
     }
     .icon-container:hover{
         transform: scale(1.2);
         opacity: 1;
-        color: var(--text-color);
+        color: var(--color-primary);
+    }
+    .flex-btn{
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-contact{
+        padding: 15px 25px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--color-white);
+        border-radius: var(--radius-2);
+        cursor: pointer;
+        transition: var(--transition);
+        background-color: var(--color-primary);
+    }
+    .btn-contact:hover{
+        background-color: var(--color-primary-accent);
+        transform: scale(1.05);
+    }
+    .btn-cv{
+        padding: 15px 25px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--color-white);
+        border-radius: var(--radius-2);
+        cursor: pointer;
+        transition: var(--transition);
+        background-color: black;
+    }
+    .btn-cv:hover{
+        transform: scale(1.05);
     }
     .btn{
         padding: 15px 25px;

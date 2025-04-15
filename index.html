@@ -28,6 +28,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- highlight CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
     <title>My Portfolio</title>
   </head>
   <body>
@@ -113,8 +130,16 @@
                   <i data-lucide="instagram"></i>
                 </a>
               </div>
-              <a href="#contact" class="btn btn-primary">Contact Me</a>
-              <a href="" class="btn btn-secondary">Download CV</a>
+              <div class="flex-btn">
+                <a href="#contact" class="btn-contact">
+                  Contact Me
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="" class="btn-cv">
+                  <i data-lucide="download"></i>
+                  Download CV
+                </a>
+              </div>
             </div>
           </div>
 
@@ -167,7 +192,133 @@
     <!-- Header section end -->
 
     <!-- About Start -->
-    <section id="about"></section>
+    <section id="about">
+      <div class="container grid">
+        <!-- box start -->
+        <div class="box self-start">
+          <div class="spotlight"></div>
+          <div class="cluster">
+            <div class="flex user">
+              <div class="profile">
+                <img src="assets/me.png" alt="" />
+              </div>
+              <div class="details">
+                <h4>Rumesh Kumara</h4>
+                <p class="text-muted">Full Stack Developer</p>
+              </div>
+            </div>
+            <h2 class="sub-title">
+              <span class="primary">Passionate</span> Developer and Lifelong
+              Learner
+            </h2>
+            <p class="description">
+              I am a passionate developer with a strong interest in web
+              development and a commitment to continuous learning.
+            </p>
+          </div>
+          <i data-custom-icon="window" class="kit window"></i>
+        </div>
+        <!-- box end -->
+
+        <!-- box start -->
+        <div class="col-2 box">
+          <div class="spotlight"></div>
+          <div class="flex row cluster">
+            <div class="code-block">
+              <div class="flex-center dot-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <pre>
+  <code>
+    const developer = {
+      name: "Rumesh Kumara",
+      age: 25,
+      skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+      ],
+      hobbies: ["Coding", "Reading", "Gaming"],
+    };
+    
+  </code>
+</pre>
+            </div>
+            <div class="my-drive">
+              <h2 class="sub-title">
+                What <span class="primary">Drives Me</span>
+              </h2>
+              <p class="description">
+                I’m passionate about the intersection of design 🎨 and
+                development 💻. I believe the best digital experiences are built
+                with a deep understanding of the user 👤 and a commitment to
+                innovation 🌟. Whether working on a simple landing page or a
+                complex web app, I bring precision 🎯, creativity ✨, and a
+                user-first mindset to every project.
+              </p>
+            </div>
+          </div>
+          <i data-custom-icon="grid-wire-frame" class="kit grid-wireframe"></i>
+        </div>
+        <!-- box end -->
+
+        <!-- box start -->
+        <div class="col-2 box">
+          <div class="cluster">
+            <div class="column">
+              <h2 class="sub-title">
+                My <span class="primary">Tech Stack</span>
+              </h2>
+              <p class="description">Always Evolving My Tech Stack</p>
+            </div>
+            <div class="column stacks-container">
+              <div class="flex-container btn stack">
+                <i data-custom-icon="react"></i>
+                ReactJs
+              </div>
+
+              <div class="flex-container btn stack">
+                <i data-custom-icon="express"></i>
+                ExpressJs
+              </div>
+
+              <div class="flex-container btn stack">
+                <i data-custom-icon="tailwindcss"></i>
+                TailwindCSS
+              </div>
+              <div class="flex-container btn stack">
+                <i data-custom-icon="typescript"></i>
+                TypeScript
+              </div>
+            </div>
+          </div>
+          <i data-custom-icon="grid" class="kit grid-box"></i>
+          <i data-custom-icon="card-ui" class="kit card-ui"></i>
+        </div>
+        <!-- end box -->
+
+        <!-- box start -->
+        <div class="box flex-center last-box">
+          <div class="cluster">
+            <h2 class="text-white btn-wrapper">
+              I'm Committed to Collaboration and Clear Communication
+            </h2>
+            <div class="flex-container btn-wrapper">
+              <a href="#contact" class="btn">Let Collaborate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Services Start -->
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="main.js"></script>
