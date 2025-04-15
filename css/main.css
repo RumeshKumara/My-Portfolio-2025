@@ -490,4 +490,109 @@
     transform: translateX(5px);
     transition: transform 0.3s ease-out;
 }
+@media only screen and (max-width: 768px){
+    #services .services{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 550px){
+    #services .services{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 /* SERVICES END */
+
+/* PROJECTS START */
+#projects{
+    background-color: var(--color-primary);
+    background-image: url(../assets/bg2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#projects .section-header{
+    color: var(--color-white);
+}
+#projects .projects{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr)); /* Sets minimum width per column */
+    gap: 50px;
+    justify-content: center;
+    max-width: 1200px; /* Increase from 900px */
+    margin: auto;
+    margin-top: 70px;
+}
+#projects .project,
+#projects .details{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #222;
+}
+#projects .project{
+    background: var(--bg-secondary);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    border-radius: var(--radius-3);
+    box-shadow: var(--border-shadow);
+    transition: var(--transition);
+    overflow: hidden;
+    width: 100%;
+    min-width: 400px; /* Set minimum width */
+}
+
+#projects img{
+    transition: var(--transition);
+}
+#projects .project:hover img{
+    transform: scale(1.1);
+}
+#projects .details{
+    flex: 1;
+    padding: 20px;
+}
+#projects .description{
+    font-size: 16px;
+    flex: 1;
+    margin-top: 10px;
+}
+
+#projects .bottom{
+    margin-top: 20px;
+}
+
+#projects .btn{
+    background: var(--bg-base);
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    gap: 10px;
+    padding: 15px 20px;
+    color: var(--color-primary);
+    border-radius: var(--radius-4);
+    transition: var(--transition);
+}
+#projects .btn:hover{
+    background: var(--color-primary);
+    color: var(--color-white);
+    transition: var(--transition);
+}
+
+/* Responsive code */
+@media only screen and (max-width: 910px){
+    #projects .projects{
+        grid-template-columns: 100%;
+    }
+    #projects .btn{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #projects .projects{
+        grid-template-columns: 100%;
+    }
+    #projects .btn{
+        font-size: 14px;
+    }
+}
