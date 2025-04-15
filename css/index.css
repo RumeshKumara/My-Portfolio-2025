@@ -214,6 +214,11 @@
        width: 2.5rem;
        height: 2.5rem; 
     }
+    
+#header .social-handles{
+    align-items: center;
+    gap: 15px;
+}
 
     /* Responsive */
     @media screen and (max-width: 900px) {

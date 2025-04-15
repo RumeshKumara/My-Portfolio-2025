@@ -30,3 +30,23 @@ menuBtn.onclick = () => {
 closeBtn.onclick = () => {
     sidebar.classList.remove("visible");
 };
+
+/* HEADER START */
+const odometer = document.querySelectorAll('.odometer');
+setTimeout(() => {
+    odometer.forEach(list => {
+        let id = list.getAttribute('id');
+        if (id === "experience") {
+            list.innerHTML = 2;
+        }
+        if (id === "projects") {
+            list.innerHTML = 15;
+        }
+        if (id === "client") {
+            list.innerHTML = 126;
+        }
+        if (id === "awards") {
+            list.innerHTML = 12;
+        }
+    });
+}, 4000); // Fix: Added a delay to allow the DOM to load before setting odometer values

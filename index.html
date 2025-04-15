@@ -14,6 +14,20 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&family=Tektur:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Odometer -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"
+      integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.min.css"
+      integrity="sha512-/k/mL9TQSZHAqtVqXJAiy5bt2w1P7gxdra0UlnFjVHF9a/LC2vxt7otx3BMcn79V/DZsPRwdw8tPlwbElMnIAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>My Portfolio</title>
   </head>
   <body>
@@ -105,47 +119,45 @@
           </div>
 
           <div class="points">
+            <div class="spotlight"></div>
+
             <!-- point start -->
             <div class="point">
               <div class="flex">
-                <div class="odemeter subtitle" id="experience">
-                  <h3 class="sub-title">+</h3>
-                </div>
-                <p class="text-muted">Year Of experience</p>
+                <div class="odometer sub-title" id="experience"></div>
+                <h3 class="sub-title">+</h3>
               </div>
+              <p class="text-muted">Years Of Experience</p>
             </div>
             <!-- point end -->
 
             <!-- point start -->
             <div class="point">
               <div class="flex">
-                <div class="odemeter subtitle" id="project">
-                  <h3 class="sub-title">+</h3>
-                </div>
-                <p class="text-muted">Completed Project</p>
+                <div class="odometer sub-title" id="projects"></div>
+                <h3 class="sub-title">+</h3>
               </div>
+              <p class="text-muted">Completed projects</p>
             </div>
             <!-- point end -->
 
             <!-- point start -->
             <div class="point">
               <div class="flex">
-                <div class="odemeter subtitle" id="awards">
-                  <h3 class="sub-title">+</h3>
-                </div>
-                <p class="text-muted">Awards</p>
+                <div class="odometer sub-title" id="awards"></div>
+                <h3 class="sub-title">🏆+</h3>
               </div>
+              <p class="text-muted">Awards</p>
             </div>
             <!-- point end -->
 
             <!-- point start -->
             <div class="point">
               <div class="flex">
-                <div class="odemeter subtitle" id="client">
-                  <h3 class="sub-title">+</h3>
-                </div>
-                <p class="text-muted">Client Worldwide</p>
+                <div class="odometer sub-title" id="client"></div>
+                <h3 class="sub-title">+</h3>
               </div>
+              <p class="text-muted">Client Worldwide</p>
             </div>
             <!-- point end -->
           </div>
@@ -153,7 +165,9 @@
       </div>
     </section>
     <!-- Header section end -->
-    <!-- Home Start -->
+
+    <!-- About Start -->
+    <section id="about"></section>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="main.js"></script>

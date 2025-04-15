@@ -115,3 +115,110 @@
 .sidebar .navitem:hover{
     color: var(--color-primary);
 }
+
+
+/* HEADER START */
+#header >.spotlight{
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#header .container{
+    min-height: 100vh;
+    padding-top: 120px;
+    overflow: visible;
+}
+#header .grid{
+    display: grid;
+    grid-template-columns: 400px auto;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 30px;
+}
+
+#header .description{
+    font-size: 20px;
+    line-height: 25px;
+}
+
+#header .buttons{
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+#header .social-handles .icon-container{
+    background: var(--bg-base);
+}
+
+#header .points{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background: rgba(var(--bg-base-rgb), 0.5);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    padding: 2rem;
+    border-radius: var(--radius-2);
+}
+
+#header .points  .flex{
+    align-items: center;
+    gap: 5px;
+}
+
+#header .points .spotlight{
+    width: 40%;
+    height: 90px;
+    right: 0;
+}
+
+/* Responsive code */
+@media only screen and (max-width: 1500px){
+    #header .container{
+        min-height: auto;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    #header .grid{
+        grid-template-columns: 100%;
+    }
+    #header .me{
+        order: 2;
+        max-width: 400px;
+        margin: auto;
+    }
+    #header .user-info{
+        order: 1;
+    }
+    #header .title,
+    #header .sub-title,
+    #header .description{
+        text-align: center;
+    }
+    #header .buttons,
+    #header .social-handles{
+        justify-content: center;
+    }
+    #header .buttons{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 600px){
+    #header .points{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #header .points .flex{
+        justify-content: center;
+    }
+    #header .points .text-muted{
+        font-size: 12px;
+        text-align: center;
+    }
+}
