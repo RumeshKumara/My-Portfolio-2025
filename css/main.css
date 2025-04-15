@@ -331,6 +331,8 @@
     grid-template-columns: repeat(3, 1fr);
     box-shadow: var(--border-shadow);
     padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #d8d8ff;
 }
 
 
@@ -339,9 +341,11 @@
     background: rgba(var(--bg-secondary-rgb), 0.8);
     box-shadow: var(--border-shadow);
     transition: var(--transition);
+    border-bottom: 2px solid #4848b9;
+    border-right: 1px solid #4848b9;
 }
 #about .stack:hover{
-    transform: scale(1.05);
+    transform: scale(1.01);
     color: var(--color-primary-accent);
 }
 
