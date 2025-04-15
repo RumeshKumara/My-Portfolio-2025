@@ -17,6 +17,7 @@
 #navbar .nav-routes{
     align-items: center;
     gap: 30px;
+    padding: 0 10px;
 }
 #navbar .route{
     font-size: 16px;
@@ -37,7 +38,13 @@
     align-items: center;
     
 }
+#navbar .icon-container{
+    background: transparent;
+    
+}
+
 #navbar .theme-toggle input{
+    
     position: absolute;
     top: -9999px;
     visibility: hidden;
@@ -122,6 +129,9 @@
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
+}
+#header .user-info{
+    margin-top: 80px;
 }
 #header .container{
     min-height: 100vh;
@@ -210,6 +220,9 @@
     #header .buttons{
         flex-direction: column;
     }
+    #header .user-info{
+        margin-top: 0px;
+    }
 }
 @media only screen and (max-width: 600px){
     #header .points{
@@ -221,6 +234,9 @@
     #header .points .text-muted{
         font-size: 12px;
         text-align: center;
+    }
+    #header .user-info{
+        margin-top: 0px;
     }
 }
 
