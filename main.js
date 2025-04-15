@@ -41,7 +41,7 @@ setTimeout(() => {
         if (id === "experience") {
             list.innerHTML = 2;
         }
-        if (id === "projects") {
+        if (id === "project") {
             list.innerHTML = 15;
         }
         if (id === "client") {
@@ -52,3 +52,20 @@ setTimeout(() => {
         }
     });
 }, 1000); // Fix: Added a delay to allow the DOM to load before setting odometer values
+
+/* TESTIMONIALS STAR */
+new Swiper(".testimonials", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    centerSlides: true,
+    speed: 5000,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoint: {
+        600: { slidesPerView: "auto" },
+    },
+
+});

@@ -513,6 +513,9 @@
 #projects .section-header{
     color: var(--color-white);
 }
+#projects .description{
+    color: #e7e7e7;
+}
 #projects .projects{
     display: grid;
     grid-template-columns: repeat(2, minmax(400px, 1fr)); /* Sets minimum width per column */
@@ -551,7 +554,8 @@
     flex: 1;
     padding: 20px;
 }
-#projects .description{
+#projects .project .description{
+    color: #222;
     font-size: 16px;
     flex: 1;
     margin-top: 10px;
@@ -596,3 +600,122 @@
         font-size: 14px;
     }
 }
+
+/* TESTIMONIALS START */
+
+#testimonials{
+    overflow: hidden;
+    position: relative;
+    padding: 50px 0;
+    background: rgba(var(--bg-secondary-rgb), 0.8);
+}
+
+#testimonials::before,
+#testimonials::after{
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+}
+#testimonials::before{
+    left: 0;
+    background: linear-gradient(to left, transparent, var(--bg-secondary));
+}
+#testimonials::after{
+    right: 0;
+    background: linear-gradient(to left, transparent, var(--bg-secondary));
+}
+
+#testimonials .sub-title{
+    text-align: center;
+}
+
+#testimonials .testimonials{
+    margin-top: 50px;
+    padding: 20px 0 ;
+    position: static;
+    height: 100%;
+}
+#testimonials .testimonials::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--bg-secondary),
+        var(--bg-secondary),
+        var(--bg-secondary),
+    );
+}
+#testimonials .testimonial{
+    height: auto;
+    max-width: 60%;
+    background: var(--bg-secondary);
+    padding: 40px;
+    box-shadow: var(--border-shadow);
+    border-radius: var(--radius-4);
+    position: relative;
+
+}
+
+#testimonials .flex{
+    align-items: center;
+    gap: 10px;
+}
+#testimonials .user{
+    margin-bottom: 30px;
+}
+
+#testimonials .name{
+    font-size: 16px;
+    font-weight: 500;
+}
+#testimonials .content{
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+#testimonials .stars-container{
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+/* Responsive code */
+
+@media only screen and (max-width: 767px){
+    #testimonials .testimonial{
+        padding: 20px;
+    }
+    #testimonials .testimonial p{
+        font-size: 12px;
+    }
+    #testimonials .stars-container{
+        bottom: 20px;
+        left: 20px;
+    }
+}
+@media only screen and (max-width: 600px){
+    #testimonials{
+        padding: 50px 20px;
+    }
+    #testimonials .testimonial{
+        max-width: 100%;
+    }
+    #testimonials .testimonial .row{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        text-align: left
+    }
+    
+}
+
