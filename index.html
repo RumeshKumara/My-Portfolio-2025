@@ -3,6 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Prevent color flashing start -->
+    <!-- The code must be written at the top here -->
+    <style>
+      html[data-theme="light"] {
+        background: #efeff1;
+      }
+      html[data-theme="dark"] {
+        background: #0a0a0c;
+      }
+    </style>
+
+    <script>
+      (function () {
+        const storageKey = "theme";
+        const checkbox = document.getElementById("theme-checkbox");
+
+        function setTheme(darkMode) {
+          document.documentElement.setAttribute(
+            "data-theme",
+            darkMode ? "dark" : "light"
+          );
+        }
+        const mql = window.matchMedia("(prefers-color-scheme:dark)");
+        const storedTheme = localStorage.getItem(storageKey);
+        const darkMode = storedTheme ? JSON.parse(storedTheme) : mql.matches;
+        setTheme(darkMode);
+        localStorage.setItem(storageKey, darkMode);
+      })();
+    </script>
+
+    <!-- Prevent color flashing end -->
     <!-- Custom Style -->
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -53,7 +85,14 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <title>My Portfolio</title>
+
+    <!-- GSAP cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
+      integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <!-- Navbar Start -->
@@ -862,12 +901,10 @@
               <a href="#" class="route-item">Cookie Policy</a>
             </div>
           </div>
-          
-          </div>
-          <div class="copyright">
-            <h3>Copyright &copy; 2024 Mr. Rumesh. All rights reserved.</h3>
-            <p class="text-muted">Built with love by Rumesh Kumara</p>
-          </div>
+        </div>
+        <div class="copyright">
+          <h3>Copyright &copy; 2024 Mr. Rumesh. All rights reserved.</h3>
+          <p class="text-muted">Built with love by Rumesh Kumara</p>
         </div>
       </div>
     </footer>

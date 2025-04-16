@@ -14,6 +14,18 @@
     backdrop-filter: blur(50px);
     border: var(--gray-border);
 }
+#navbar.drop{
+    position: fixed;
+    animation: drop 1s;
+}
+@keyframes drop{
+    0%{
+        top: -100px;
+    }
+    100%{
+        top: 20px;
+    }
+}
 #navbar .nav-routes{
     align-items: center;
     gap: 30px;
@@ -806,7 +818,7 @@
     height: auto;
 }
 #contact .icon-container{
-    background: #110c1f;
+    background: #150838;
     color: #ffffff;
 }
 
@@ -866,7 +878,7 @@
     background: var(--bg-base);
     border: 1px solid transparent;
     border-radius: var(--radius-2);
-    color: var(--text-color);
+    color: var (--text-color);
     transition: var(--transition);
 }
 
@@ -990,5 +1002,38 @@
     #footer .grid{
         grid-template-columns: 100%;
     }
+}
+
+/* Theme transition */
+html {
+  transition: background-color 0.3s ease;
+}
+
+/* Animation for theme toggle */
+.theme-toggle .icon-container {
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle input:checked + .icon-container {
+  transform: rotate(360deg);
+}
+
+/* General transitions */
+.btn, .route, .handle {
+  transition: all 0.3s ease;
+}
+
+/* Spotlight animation */
+.spotlight {
+  animation: spotlightMove 8s ease-in-out infinite;
+}
+
+@keyframes spotlightMove {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
 }
 
