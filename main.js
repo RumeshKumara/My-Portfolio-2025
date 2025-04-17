@@ -3,7 +3,7 @@ lucide.createIcons();
 //Include the highlight js
 hljs.highlightAll();
 
-gsap.registerPlugin(scrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 //Custom svg icon implementation
 const dataCustomIcon = document.querySelectorAll('[data-custom-icon]'); // Fix: Added square brackets
