@@ -110,109 +110,161 @@ setTimeout(() => {
 
 // gsap code
 gsap
-    .timeline({ delay: 0.5 })
-    .from("#header .points", { y: -30, opacity: 0 })
-    .from("#header .me", { scale: 0.7, opacity: 0, })
-    .from(["#header .user-info .sub-title", "#header .user-info .description"], { y: 20, opacity: 0 })
-    .from("#header .user-info .title", { x: -30, opacity: 0 })
-    .from("#header .user-info .buttons", { x: -30, opacity: 0 })
-    .from("#header .point", { x: -30, opacity: 0, stagger: 0.5 })
-// HEADER END
+    .timeline({ delay: 0.3 })
+    .set(["#header .points", "#header .me", "#header .user-info *", "#header .point"], {
+        opacity: 0,
+        y: 30
+    })
+    .to("#header .points", { y: 0, opacity: 1, duration: 0.5 })
+    .to("#header .me", { scale: 1, opacity: 1, duration: 0.5 })
+    .to("#header .user-info *", { y: 0, opacity: 1, stagger: 0.2 })
+    .to("#header .point", { y: 0, opacity: 1, stagger: 0.2 });
 
-//ABOUT START
+// ABOUT SECTION
 gsap.timeline({
-    delay: 0.5,
     scrollTrigger: {
         trigger: "#about",
-        start: "20% bottom",
-        end: "bottom top",
+        start: "top center",
+        end: "center center",
+        toggleActions: "play none none reverse",
+        scrub: 1
     }
 })
-    .from("#about .box", { y: 30, opacity: 0, stagger: 0.5 })
+    .set("#about .box", { opacity: 0, y: 50 })
+    .to("#about .box", {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: { amount: 0.8 }
+    });
 
-//ABOUT END
-
-//SERVICES START
+// SERVICES SECTION
 gsap.timeline({
-    delay: 0.5,
     scrollTrigger: {
         trigger: "#services",
-        start: "20% bottom",
-        end: "bottom top",
+        start: "top center",
+        end: "center center",
+        toggleActions: "play none none reverse",
+        scrub: 1
     }
 })
-    .from(["#services .section-header .sub-title", "#services .section-header .description"], { y: 30, opacity: 0, stagger: 0.5 })
-    .from("#services .service", { y: 30, opacity: 0, stagger: 0.5 });
+    .set([".section-header *", "#services .service"], {
+        opacity: 0,
+        y: 50
+    })
+    .to("#services .section-header *", {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.2
+    })
+    .to("#services .service", {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: { amount: 0.8 }
+    });
 
-
-// SERVICES END
-
-// PROJECT START
+// PROJECTS SECTION
 gsap.timeline({
-    delay: 0.5,
     scrollTrigger: {
         trigger: "#projects",
-        start: "20% bottom",
-        end: "bottom top",
+        start: "top center",
+        end: "center center",
+        toggleActions: "play none none reverse",
+        scrub: 1
     }
 })
-    .from([
-        "#projects .section-header .sub-title",
-        "#services .section-header .description"
-    ],
-        { y: 30, opacity: 0, stagger: 0.5 })
-    .from("#projects .project", { y: 30, opacity: 0, stagger: 0.5 });
+    .set([".section-header *", "#projects .project"], {
+        opacity: 0,
+        y: 50
+    })
+    .to("#projects .section-header *", {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.2
+    })
+    .to("#projects .project", {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: { amount: 0.8 }
+    });
 
-
-//  PROJECT END
-
-
-
-/* TESTIMONIALS STAR */
-new Swiper(".testimonials", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    centerSlides: true,
-    speed: 5000,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    breakpoint: {
-        600: { slidesPerView: "auto" },
-    },
-
-});
-
+// TESTIMONIALS SECTION
 gsap.timeline({
-    delay: 0.5,
     scrollTrigger: {
         trigger: "#testimonials",
-        start: "20% bottom",
-        end: "bottom top",
+        start: "top center",
+        end: "center center",
+        toggleActions: "play none none reverse",
+        scrub: 1
     }
 })
-    .from([
-        "#testimonials .section-header .sub-title",
-        "#testimonials .section-header .description"
-    ],
-        { y: 30, opacity: 0, stagger: 0.5 })
-    .from("#testimonials .testimonial", { y: 30, opacity: 0, stagger: 0.5 });
-/* TESTIMONIALS END */
+    .set([".section-header *", "#testimonials .testimonial"], {
+        opacity: 0,
+        y: 50
+    })
+    .to("#testimonials .section-header *", {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.2
+    })
+    .to("#testimonials .testimonial", {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: { amount: 0.8 }
+    });
 
-// contact START
+// Initialize Swiper for testimonials
+const testimonialsSwiper = new Swiper('.testimonials', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        },
+    },
+});
+
+// CONTACT SECTION
 gsap.timeline({
-    delay: 0.5,
     scrollTrigger: {
         trigger: "#contact",
-        start: "20% bottom",
-        end: "bottom top",
+        start: "top center",
+        end: "center center",
+        toggleActions: "play none none reverse",
+        scrub: 1
     }
 })
-
-    .from("#contact .box", { y: 30, opacity: 0, stagger: 0.5 })
-    .from("#contact .contact-info", { x: 30, opacity: 0 });
-
-
-//  contact END
+    .set(["#contact .box", "#contact .contact-info"], {
+        opacity: 0,
+        y: 50
+    })
+    .to("#contact .box", {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: { amount: 0.5 }
+    })
+    .to("#contact .contact-info", {
+        opacity: 1,
+        y: 0,
+        duration: 0.5
+    });

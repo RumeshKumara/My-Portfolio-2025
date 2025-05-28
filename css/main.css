@@ -685,13 +685,14 @@
 }
 #testimonials .testimonial{
     height: auto;
-    max-width: 60%;
+    max-width: 400px;
+    min-width: 300px;
     background: var(--bg-secondary);
-    padding: 40px;
+    padding: 40px 30px;
     box-shadow: var(--border-shadow);
     border-radius: var(--radius-4);
     position: relative;
-
+    margin: 0 15px;
 }
 
 #testimonials .flex{
@@ -707,9 +708,10 @@
     font-weight: 500;
 }
 #testimonials .content{
-    font-size: 16px;
-    margin-bottom: 20px;
-
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: var(--text-color);
 }
 #testimonials .stars-container{
     justify-content: flex-start;
